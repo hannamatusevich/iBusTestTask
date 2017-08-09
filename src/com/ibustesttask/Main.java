@@ -45,7 +45,7 @@ public class Main {
         System.out.println("[1] Error message should be displayed " +
                 "after form submission with INCORRECT data:");
 
-        if (errorMessageDisplayValue.equals("block")) {
+        if (!errorMessageDisplayValue.equals("none")) {
             System.out.println("[1] Status: PASSED");
         } else System.out.println("[1] Status: FAILED");
 
@@ -63,7 +63,7 @@ public class Main {
         System.out.println("[2] Error message should be displayed " +
                 "after form submission with EMPTY data:");
 
-        if (errorMessageDisplayValue.equals("block")) {
+        if (!errorMessageDisplayValue.equals("none")) {
             System.out.println("[2] Status: PASSED");
         } else System.out.println("[2] Status: FAILED");
 
@@ -93,7 +93,7 @@ public class Main {
                 if (isLoggedIn) {
                     System.out.println("[3] Status: PASSED");
                 } else {
-                    System.out.println("[3] Status: PASSED");
+                    System.out.println("[3] Status: FAILED");
                 }
                 return isLoggedIn;
             }
